@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - HealthyBeing.com</title>
+
+    <!-- css and js integration  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="hbl.jpg">
+
+    <!-- back to top function -->
+    <script>
+        document.querySelector('a[href="#top"]').addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="./">HealthyBeing.com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/emer.html" target="_blank">Emergency</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="navbarDropdown" role="button" aria-expanded="false"
+                            data-bs-toggle="modal" data-bs-target="#servicesModal">
+                            Services
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Find</button>
+                </form>
+
+                <div class="mx-2">
+                    <button class="btn btn-outline-danger mx-2" data-bs-toggle="modal"
+                        data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-outline-info" data-bs-toggle="modal"
+                        data-bs-target="#signupModal">Signup</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- services Modal -->
+    <div class="modal fade" id="servicesModal" tabindex="-1" aria-labelledby="servicesModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="servicesModalLabel">Services
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <ul><a href="/organ_based.html" target="_blank"><button type="button"
+                                class="btn btn-outline-dark">Organ based disorders</button></a></ul>
+                    <ul><a href="/disorder.html" target="_blank"><button type="button"
+                                class="btn btn-outline-dark">Disorders & Diseases</button></a></ul>
+                    <ul><a href="/courses.html" target="_blank">
+                            <button type="button" class="btn btn-outline-dark">Training courses</button></a></ul>
+                    <ul><a href="/update.html" target="_blank">
+                            <button type="button" class="btn btn-outline-dark">Latest News & Updates</button></a></ul>
+                    <ul><a href="/train.html" target="_blank"><button type="button" class="btn btn-outline-dark">Basic
+                                training</button></a></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="loginModalLabel">Login</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">You accept our terms & conditions by
+                                checking this.</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">Get a HealthyBeing account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">By checking this you agree to our Terms
+                                & conditions</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade mx-2 mt-2" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="h1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="bg-secondary">Stay Happy and Healthy like a HealthyBeing !</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="h2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="bg-secondary">Learn How to respond to emergencies quickly !</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="h3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="bg-secondary">Find Help and resources at the time of emergencies !</h3>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="h4.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3 class="bg-secondary">Get trained to tackle any health related emergencies and Be a Hero !</h3>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- two columns for courses and updates pages -->
+    <div class="row align-items-md-stretch mt-4 align-center mx-1">
+        <div class="col-md-5">
+            <div class="h-100 p-5 text-white bg-dark rounded-3">
+                <h2>Learn something that can help you !</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis dolores at corrupti assumenda alias
+                    architecto similique veritatis debitis cumque mollitia.</p>
+                <a href="/courses.html" target="_blank"><button class="btn btn-outline-info" type="button">Browse
+                        Courses</button></a>
+
+            </div>
+        </div>
+        <div class="col-md-7">
+            <div class="h-100 p-5 bg-warning border rounded-3">
+                <h2>Keep updating yourself !</h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet quae officiis ipsa maxime rem sit
+                    repellat rerum, a, deserunt tenetur odio nam. Explicabo nemo eligendi consequuntur quasi distinctio
+                    quisquam totam.</p>
+                <a href="/update.html" target="_blank"><button class="btn btn-outline-danger" type="button">Check
+                        Updates</button></a>
+
+            </div>
+        </div>
+    </div>
+    <!-- features section -->
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5 mx-2">
+        <div class="col d-flex flex-column align-items-start gap-2">
+            <h2 class="fw-bold text-body-emphasis">Read this section to use this website effectively !
+            </h2>
+            <p class="text-body-secondary">This website contains 4 main pages for better user experience. You can see in
+                the right pane of this
+                section about each one of them and you will find all of them in this page itself. You can reach out to
+                us by filling out the <b>Contact form</b> present in the footer of this page and also you can use the
+                <b>About us</b>
+                section to know more about us that is also there in the footer itself.
+            </p>
+
+        </div>
+
+        <div class="col">
+            <div class="row row-cols-1 row-cols-sm-2 g-4">
+                <div class="col d-flex flex-column gap-2">
+                    <h4 class="fw-semibold mb-0 text-body-emphasis">Emergency services</h4>
+                    <p class="text-body-secondary">In the navigation bar, you can just click on the <b>Emergency</b>
+                        option
+                        and the website will automatically suggest some nearby hospitals for rapid response at the time
+                        of emergency.</p>
+                </div>
+
+                <div class="col d-flex flex-column gap-2">
+
+                    <h4 class="fw-semibold mb-0 text-body-emphasis">Training courses
+                    </h4>
+                    <p class="text-body-secondary">The website also contains a seperate courses section that too in
+                        video and blog format for every kind of learner out there. You will find the courses option in
+                        the <b>Services</b> option from the navigation bar or <b>Browse Courses</b> option in the
+                        left above this section.
+                    </p>
+                </div>
+
+                <div class="col d-flex flex-column gap-2">
+
+                    <h4 class="fw-semibold mb-0 text-body-emphasis">Latest News & Updates</h4>
+                    <p class="text-body-secondary">Getting info about latest happenings in the health sector from
+                        different sites can be a hectic process. But not anymore ! as this website has a dedicated
+                        section
+                        for that updates too. You can use the <b>Services</b> option from the navigation bar or
+                        <b>Check Updates</b> option in the right above this section.
+                    </p>
+                </div>
+
+                <div class="col d-flex flex-column gap-2">
+
+                    <h4 class="fw-semibold mb-0 text-body-emphasis">Some added info</h4>
+                    <p class="text-body-secondary">We have 2 sections - one for disorders & diseases information and
+                        other for basic training for some simple health-related emergencies. You will find both of these
+                        options in the <b>Services</b> option in the navigation bar only.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion mx-1" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    <b><i>What is Public Health Emergencies ?</i></b>
+
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>A public health emergency is a situation that threatens the health of a community or
+                        population or even an individual, which can happen due to various factors including natural
+                        disaster or by man-made event.</strong>
+                    Emergency can be easily handled when you are trained and well-acknowledged about the events that can
+                    be hazardous. <br>
+                    There are several disease/disorders which may turn into an emergency at any hour about which you can
+                    learn in <b>"Disorder & Disease"</b> option present in this webpage itself.
+                    <br>
+                    However, in addition to this you must know some basics to tackle not so severe emergencies, which
+                    you can learn in <b>"Basic Training"</b> option.
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <b><i>Common precautions to be safe & healthy.</i></b>
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body mx-2">
+                    <iframe width="630" height="315" src="https://www.youtube.com/embed/JWNkbTqBJXY?si=-eh4TOLrFs5DAYgb"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <iframe width="630" height="315" src="https://www.youtube.com/embed/R_-VZY_-0TA?si=61wB0yEJbNZV5Jf-"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    <b><i>Some resources</i></b>
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    We hope your experience was worthwhile and our website has been helpful in facilitating you with
+                    information about health related emergencies and how to respond to them and stay prepared.
+                    <br>
+                    <b>
+                        <i>Here are some other useful websites that you can browse to get more info about health
+                            sector.</i></b>
+                    <br><br>
+                    <li><a href="https://www.who.int/" target="_blank"><button class="btn btn-warning">World Health
+                                Organization</button></a></li><br>
+                    <li><a href="https://main.mohfw.gov.in/" target="_blank"><button class="btn btn-warning">Ministry of
+                                Health & Family welfare</button></a></li><br>
+                    <li><a href="https://www.indianredcross.org/ircs/index.php" target="_blank"><button
+                                class="btn btn-warning">Indian Red Cross Society</button></a></li><br>
+                    <li><a href="https://www.cdc.gov/index.htm" target="_blank"><button class="btn btn-warning">Centers
+                                for Disease Control &
+                                Prevention</button></a></li>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-dark text-light mt-4">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <p>Email: prog.vivek@gmail.com</p>
+                    <p>Phone: +91 88662 46103</p>
+                    <a href="/contact.html" target="_blank"><button type="button" class="btn btn-outline-light">Contact
+                            Form</button></a>
+                </div>
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste repellat aliquid magni, ipsam
+                        tenetur non consectetur ducimus sequi totam expedita itaque animi impedit nulla dignissimos
+                        possimus ab assumenda repellendus veniam?</p>
+                    <a href="/about.html" target="_blank"><button type="button" class="btn btn-outline-light">About
+                            Us</button></a>
+                </div>
+                <div class="col-md-4">
+                    <h5>Helpline Nos.</h5>
+                    <p>104 - State Helpline for health</p>
+                    <p>1070 - Central Relief Commissioner for Natural Calamities</p>
+                    <p>1073 - Road Accident</p>
+                    <p>1098 - Child abuse hotline</p>
+                    <p>1800-180-1104 - National Health Helpline</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p>&copy; 2023 HealthyBeing. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <a href="#top" class="text-light"><button class="btn btn-primary" type="button">Back To Top</button></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
