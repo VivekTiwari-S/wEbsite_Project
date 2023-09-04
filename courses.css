@@ -1,0 +1,36 @@
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: calc(33.33% - 10px);
+    /* Three cards in a row; adjust as needed */
+    margin: 5px;
+    background-color: #e4e1e1;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+    .card {
+        width: calc(50% - 10px);
+        /* Two cards in a row on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+        /* One card in a row on even smaller screens */
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .card {
+        width: 100%;
+        /* On smaller screens, make cards occupy the entire width */
+    }
+}
